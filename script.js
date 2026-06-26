@@ -55,11 +55,11 @@ function renderTasks() {
     li.appendChild(dueDateSpan);
     
     if (task.completed) li.classList.add("completed");
-      li.addEventListener("click", function() {
-        task.completed = !task.completed;
-        saveTasks();
-        renderTasks();
-      });
+      textSpan.addEventListener("click", function() {
+  task.completed = !task.completed;
+  saveTasks();
+  renderTasks();
+});
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
