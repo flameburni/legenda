@@ -265,7 +265,7 @@ li.completed {
   padding-top: 10px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   body {
     align-items: center;
     padding: 40px 20px;
