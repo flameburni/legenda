@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="theme-color" content="#6c63ff">
+    <title>Legenda</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Leg<span style="color: #6c63ff">enda</span></h1>
+      
+     <div class="input-row">
+      <input type="text" id="taskInput" placeholder="Enter a task" />
+       <button id="addBtn">Add</button>
+     </div>
+      
+     <div class="priority-row">
+      <button class="priorityBtn" data-priority="high">High</button>
+      <button class="priorityBtn" data-priority="medium">Medium</button>
+      <button class="priorityBtn" data-priority="low">Low</button>
+     </div>
+
+    <div class="date-row">
+      <label for="dueDateInput">Due date (optional):</label>
+      <input type="date" id="dueDateInput">
+    </div>
+      
+      
+      <button id="clrBtn">Clear All</button>
+      
+      <p id="errorMsg">Please enter a task!</p>
+      
+      <ul id="taskList"></ul>
+      
+      <p id="emptyState">No tasks yet - add one above!</p>
+      
+      <p id="taskCounter"></p>
+    </div>
+      <script src="script.js"></script>
+  </body>
+</html>
+      

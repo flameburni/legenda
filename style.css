@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+@font-face {
+  font-family: "Plus";
+  src: url("fonts/Plus-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Plus", sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+.container {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+}
+
+.input-row input:focus {
+  border-color: #6c63ff;
+}
+
+.priority-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.date-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+#dueDateInput {
+  flex: 1;
+  padding: 8px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+
+li {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+li span {
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+li span:first-child {
+  flex: 1 1 100%;
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+li button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: #fff0f0;
+  color: #ff4d4d;
+}
+
+.editBtn {
+  background-color: #f0f0ff;
+  color: #6c63ff;
+}
+
+.suggestBtn {
+  background-color: #f0fff4;
+  color: #34c759;
+  font-size: 11px;
+  padding: 4px 8px;
+}
+
+.saveBtnEdit {
+  background-color: #6c63ff;
+  color: white;
+}
+
+.cancelBtnEdit {
+  background-color: #f5f5f5;
+  color: #666;
+}
+
+li.completed {
+  opacity: 0.5;
+}
+
+#errorMsg {
+  font-size: 13px;
+  color: #ff4d4d;
+  display: none;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.priority-low {
+  color: green;
+}
+
+.priority-medium {
+  color: orange;
+}
+
+.priority-high {
+  color: red;
+}
+
+#addBtn {
+  flex-shrink: 0;
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+#clrBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: #ff4d4d;
+  border: 1.5px solid #ff4d4d;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.priorityBtn {
+  flex: 1;
+  padding: 8px;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background: white;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.priorityBtn.active[data-priority = "high"] {
+  background-color: #ff4d4d;
+  color: white;
+  border-color: #ff4d4d;
+}
+
+.priorityBtn.active[data-priority = "medium"] {
+  background-color: #ff9500;
+  color: white;
+  border-color: #ff9500;
+}
+
+.priorityBtn.active[data-priority = "low"] {
+  background-color: #34c759;
+  color: white;
+  border-color: #34c759;
+}
+
+.dueDateSpan {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+}
+
+.priorityLabel {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.suggestionText {
+  flex: 1 1 100%;
+  font-size: 13px;
+  color: #555;
+  background-color: #f8f8ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #6c63ff;
+  margin-top: 4px;
+}
+
+#emptyState {
+  font-size: 15px;
+  color: #999;
+  text-align: center;
+  padding: 20px 0;
+}
+
+#taskCounter {
+  font-size: 13px;
+  color: #999;
+  text-align: center;
+  padding-top: 10px;
+}
