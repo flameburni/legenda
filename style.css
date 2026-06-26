@@ -96,6 +96,7 @@ li {
   padding: 12px 0;
   border-bottom: 1px solid #f0f0f0;
   width: 100%;
+  cursor: default;
 }
 
 li span {
@@ -108,6 +109,7 @@ li span:first-child {
   min-width: 0;
   overflow-wrap: break-word;
   word-break: break-word;
+  cursor: pointer;
 }
 
 li button {
@@ -262,3 +264,27 @@ li.completed {
   text-align: center;
   padding-top: 10px;
 }
+
+@media (min-width: 768px) {
+  body {
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 600px;
+    padding: 32px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  li {
+    padding: 16px 0;
+  }
+
+  .input-row input {
+    font-size: 16px;
+  }
+  }
